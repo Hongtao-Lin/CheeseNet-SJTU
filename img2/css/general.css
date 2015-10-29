@@ -1,0 +1,138 @@
+body {
+	font-family: "Microsoft Yahei";
+}
+
+#main_div {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+	top: 50px;
+	padding: 20px;
+	/*border: 1px dotted rgba(192, 197, 198, 0.5);*/
+}
+
+#question_intro {
+	border-radius: 5px;
+	position: relative;
+	padding: 10px;
+	background-color: #F1F1F1;
+	margin-bottom: 30px;
+}
+
+#question_intro h3{
+	padding: 2px;
+	margin: auto;
+	font-size: 1.2em;
+	color: #423F3D;
+	font-weight: normal;
+	display: inline-block;
+}
+
+#question_intro button{
+	padding: 6px 10px;
+	border: 0;
+	font-size: 1.2em; 
+	border-radius: 5px;
+	background-color: #31A8B5;
+	color: white;
+	display: inline-block;
+}
+
+#question_intro button:before{
+	content: "+";
+	padding: 2px;
+}
+
+.wrap {
+	height: auto;
+	overflow: hidden;
+}
+
+#main_question {
+	width: auto;
+	overflow: hidden;
+	position: relative;
+	background-color: #E0E0E0;
+}
+
+.nav_op {
+	float: right;
+	width: 30px;
+	/*background-color: black;*/
+}
+
+.nav_op a{
+	text-decoration: none;
+	color: white;
+	cursor: default;
+}
+
+.nav_op ul{
+	list-style: none;
+	padding: 0;
+	margin-top: 21px;
+}
+
+.nav_op li{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: white;
+	padding: 5px 7px;
+	position: relative;
+	width: auto;
+	margin-bottom: 10px;
+	background-color: #59D7B8;
+}
+
+#exit_op {
+	background-color: #FCB4B4;
+	padding-left: 9px;
+}
+
+#choose_type_div div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 300px;
+	background-color: #59D7B8;
+	display: none;
+	padding: 40px 50px;
+	box-sizing: border-box;
+}
+
+#choose_type_div > div > p {
+
+}
+
+#choose_type_div ul{
+	list-style: none;
+}
+
+#choose_type_div li{
+	background-color: #31A8B5;
+}
+
+#main_question > div{
+	width: 43.5%;
+	padding: 50px 3%;
+	display: inline-block;
+	vertical-align: top;
+	color: gray;
+}
+
+.question{
+	border-right: 1px dotted gray;
+}
+
+.type_name {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	padding: 5px 8px;
+	background-color: #C4C4C4;
+}
+
+.answer_sheet span{
+	margin-right: 10px;
+}
+

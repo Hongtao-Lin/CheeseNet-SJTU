@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- for responsive design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- http-equiv: provide a type/value term -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Assessment builder for cheesenet">
+	<meta name="author" content="Newbee studio">
+	<meta name="keyword" content="Assessment_builder cheesenet">
+	<title>Asscessment Builder</title>
+	<link href="css/general.css" rel="stylesheet" type="text/css">
+	<style>
+		#nav_list{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 1em;
+			text-align: center;
+		}
+		#nav_list li{
+			/*font-size: 1em;*/
+			color: gray;
+			margin: 0;
+			padding: 0;
+			word-wrap: break-word;
+			letter-spacing: 0.5em;
+			margin-bottom: 2em;
+		}
+
+		#nav_list li:after{
+			content: "";
+			position: absolute;
+			left: 0.25em;
+			width: 0;
+			height: 0;
+			margin-top: 1em;
+			border: 0 solid transparent;
+			border-width: 2px 0.75em;
+			border-color: #CECECE;
+		}
+		#nav_list li.last:after{
+			content: "";
+			position: absolute;
+			left: 0.25em;
+			width: 0;
+			height: 0;
+			margin-top: 1em;
+			border: 0 solid transparent;
+			border-width: 2px 0.75em;
+			border-color: 0 !important;
+		}
+
+	</style>
+	<script src="http://libs.baidu.com/jquery/1.11.3/jquery.js"></script>
+</head>
+<body>
+	<ul id="nav_list">
+		<li>词汇短语</li>
+		<li>语法句法</li>
+		<li>阅读短语</li>
+		<li class="last">视频句法</li>
+	</div>
+	<script src="js/general.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- for responsive design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- http-equiv: provide a type/value term -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Assessment builder for cheesenet">
+	<meta name="author" content="Newbee studio">
+	<meta name="keyword" content="Assessment_builder cheesenet">
+	<title>Asscessment Builder</title>
+	<link href="css/general.css" rel="stylesheet" type="text/css">
+	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="http://libs.baidu.com/jquery/1.11.3/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+
+
+		$(document).ready(function() {
+
+			var colWidth = $("#main_question").outerWidth() - $("#main_question .question").first().outerWidth();
+			var ele = $("#choose_type_div").find("div");
+			$(ele).css("width", colWidth);
+			$(ele).css("left", -1*colWidth);
+			$("#choose_type_div div").mouseleave(function () {
+				$(this).css("z-index", "0");
+				$(this).toggle('slide', {
+					direction: 'right'
+				}, 1000);
+				// $(this).css("display", "none");
+			});
+
+			$("#choose_type_div").click(function() {
+
+				$(ele).css("z-index", "100");
+				$(this).toggle('slide', {
+					direction: 'right'
+				}, 1000);
+				// $(ele).css("display", "block");
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="main_div">
+		<div id="question_intro">
+			<h3>阅读理解</h3>
+			<button type="button">加文章</button>
+		</div>
+		<div class="wrap">
+			<div class="nav_op">
+				<ul>
+					<li id="exit_op"><i class="fa fa-times"></i></li>
+					<li><a href="#">换文章</a></li>
+					<li>
+						<div id="choose_type_div">
+							<a href="#">换题型</a>
+							<div>
+								<p>Choose another Question Type</p>
+								<ul>
+									<li><a href="#">Question Type</a></li>
+									<li><a href="#">Question Type</a></li>
+									<li><a href="#">Question Type</a></li>
+									<li><a href="#">Question Type</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="main_question">
+				<div class="question">
+					<p>It was a cold winter afternoon before Christmas.My parents and I sat on the bench in Washington, D.C.’s Union Station,waiting for the train.Inside the waiting hall were many people.</p>
+					<p>A boy sat nearby.His worn jacket,pale face,dirty hands all seemed to tell me that he was homeless. “He must be cold and hungry.Maybe I should help him,”I said to myself.</p>
+					<p>Putting the meal box aside,the boy stood up and helped the old man to his seat.He took off his jacket and covered it over the old man’s shoulders,saying, “A gentleman brought me this warm meal but I just finished eating.I hate to waste good food.Can you help me out?”He placed the stillwarm meal box in the old man’s hands without waiting for an answer.</p>
+				</div>
+				<div class="answer">
+					<div class="type_name"><span>题型名称</span></div>
+					<div class="answer_sheet">
+						<p>
+						<span>A. have lunch</span><span>B. always</span><span>C. lunch time</span>
+						<span>D. relatives</span><span>E. knid</span><span>F. plays with</span>
+						<span>G. interesting</span>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/general.js"></script>
+</body>
+</html>
