@@ -10,32 +10,18 @@
 	<meta name="author" content="Newbee studio">
 	<meta name="keyword" content="Assessment_builder cheesenet">
 	<title>Asscessment Builder</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
 	<link href="css/general.css" rel="stylesheet" type="text/css">
 	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="http://libs.baidu.com/jquery/1.11.3/jquery.js"></script>
-	<script>
-	$(document).ready(function() {
-		$(".unit_hw li").click(function() {
-			var check = $(this).find(".fa-stack").first();
-			if( $(check).find(".fa-check").length ){
-				$(check).find(".fa-check").removeClass("fa-check");
-			}
-			else{
-				$(check).find(".fa-stack-1x").addClass("fa-check");
-			}
-		});
-	});
-	</script>
-
 </head>
 <body>
 	<div id="general_hw">
-		<div class="breadcrumb">
-			<li><a href="#" class="first-item"><span class="icon icon-home"></span>单元与类型</a></li>
-			<li><a href="#" class="sec-item"><span class="icon icon-breaker"></span>设定题目/文章数</a></li>
-			<li><a href="#" class="third-item"><span class="icon icon-breaker"></span>布置/保存</a></li>
+		<div class="breadcrumb" id="breadcrumb">
+
 		</div>
 		<div id="choose_hw_div">
 			<div class="book_cover">
@@ -45,13 +31,7 @@
 				<button type="button" id="change_book_btn">换教材</button>
 			</div >
 			<div class="unit_hw">
-				<ul>
-					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元一</span>Title of Unit1</li>
-					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元二</span>Title of Unit1</li>
-					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元三</span>Title of Unit1</li>
-					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元四</span>Title of Unit1</li>
-					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元五</span>Title of Unit1</li>
-					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元六</span>Title of Unit1</li>
+				<ul id="unit_hw_ul">
 				</ul>
 			</div>
 		</div>
@@ -60,6 +40,53 @@
 			<button type="button">布置<span>固定</span>作业</button>
 		</div>
 	</div>
-	<script src="js/general.js"></script>
 </body>
+
+<script type="text/babel">
+	var breadcrumbs = ['教材与单元', '选择知识体系', '知识点选择' ,'题目选择', '布置保存'];
+	ReactDOM.render(
+		<div>
+		{
+		  breadcrumbs.map(function (breadcrumb) {
+		    return <li><a href="#"><span class="icon icon-home"></span>{breadcrumb}</a></li>
+		  })
+		}
+		</div>,
+		document.getElementById('breadcrumb')
+	);
+	var units = ['一', '二', '三' ,'四', '五', '六'];
+	var UnitClick = React.createClass({
+		getInitialState: function() {
+			return {chosen: false};
+		},
+		handleClick: function(event) {
+			this.setState({chosen: !this.state.chosen});
+		},
+		render: function() {
+			var text = this.state.chosen ? 'fa-check' : '';
+			return (
+				<li onClick={this.handleClick}>
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-lg fa-stack-1x"></i>
+					</span>
+					<span>{'单元'+this.props.title}</span>
+					Title of Unit1
+				</li>
+			);
+		}
+	});
+	ReactDOM.render(
+		<ul>
+			{
+				units.map(function (unit) {
+				    return <UnitClick title={unit} />
+				})
+			}
+		</ul>,
+		document.getElementById('unit_hw_ul')
+	);
+</script>
 </html>
+
+
