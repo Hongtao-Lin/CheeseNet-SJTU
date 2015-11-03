@@ -26,19 +26,13 @@
 			$(ele).css("left", -1*colWidth);
 			$("#choose_type_div div").mouseleave(function () {
 				$(this).css("z-index", "0");
-				$(this).toggle('slide', {
-					direction: 'right'
-				}, 1000);
-				// $(this).css("display", "none");
+				$(this).css("display", "none");
 			});
 
 			$("#choose_type_div").click(function() {
 
 				$(ele).css("z-index", "100");
-				$(this).toggle('slide', {
-					direction: 'right'
-				}, 1000);
-				// $(ele).css("display", "block");
+				$(ele).css("display", "block");
 			});
 
 		});
