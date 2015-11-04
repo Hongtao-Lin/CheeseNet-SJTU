@@ -1,5 +1,6 @@
 body {
-	font-family: "Microsoft Yahei";
+	font-family: "Microsoft Yahei" !important;
+	font-size: 16px !important;
 }
 
 #general_hw {
@@ -93,6 +94,49 @@ body {
 
 .unit_hw li:hover {
 	background-color: #47DBB8;
+}
+
+.div-book{
+	margin: 5% auto;
+	width: 100% !important;
+	text-align: center;
+}
+
+.modal-ctrl{
+	margin: 2% auto;
+	width: 100%;
+	text-align: center;
+}
+
+.modal-ctrl>button{
+	font-size: 19px !important;
+	margin: 3% 3%;
+	width: 10%;
+	height: 60%;
+}
+
+.modal-dialog{
+	margin: 8% auto !important;
+	width: 50% !important;
+}
+
+.modal-content{
+	border-radius: 20px !important;
+}
+
+.btn-book{
+	padding: 20px 15px !important;
+	font-size: 20px !important;
+	margin: 3% 1%;
+}
+
+.btn-default{
+	background-color: #E7E7E7 !important;
+}
+
+span.book-subtitle{
+	font-size: 30px;
+	margin: 2% auto;
 }
 
 #assign_hw_div {

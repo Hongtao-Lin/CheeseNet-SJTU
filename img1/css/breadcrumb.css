@@ -3,7 +3,8 @@
 .breadcrumb {
 	list-style: none;
 	display: inline-block;
-	/*background-color: #c4caca;*/
+	background-color: #ffffff !important;
+	
 }
 
 .breadcrumb .icon {
@@ -109,4 +110,10 @@
 
 .breadcrumb li a:active{
 	background-color: #C4CACA;
+}
+
+.breadcrumb>li+li:before{
+	padding: 0;
+	color: #FFF;
+	content: none !important;
 }
