@@ -1,0 +1,58 @@
+body {
+	font-family: "Microsoft Yahei" !important;
+	font-size: 16px !important;
+}
+li{
+	list-style: none;
+}
+ul{
+	padding-left:0px;
+}
+.container{
+	width:1000px;
+	margin:auto;
+}
+
+#general_hw {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+	top: 50px;
+	padding: 20px;
+	/*border: 1px dotted rgba(192, 197, 198, 0.5);*/
+}
+
+.left-bar{
+	float:left;
+	width:270px;
+	background-color: #f1f1f1;
+	padding:10px 15px;
+	margin-left:6px;
+	margin-top:10px;
+	border-radius: 10px;
+}
+
+.left-bar-title{
+	color:#acaba9;
+	font-size:16px;
+	margin-bottom:20px;
+} 
+
+.exercise_board{
+	margin-top:10px;
+}
+.exercise_title{
+	color:#489e9d;
+	margin-bottom:10px;
+}
+.exercise_list li{
+	margin-top:2px;
+	height:50px;
+}
+.exercise_list li .exercise_li_left{
+	width:30px;
+	height:50px;
+	position:relative;
+	float:left;
+	background-color: #d2dfe8;
+}
