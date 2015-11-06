@@ -10,35 +10,38 @@
 	<meta name="author" content="Newbee studio">
 	<meta name="keyword" content="Assessment_builder cheesenet">
 	<title>Asscessment Builder</title>
+	<link href="css/general.css" rel="stylesheet" type="text/css">
+	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
     <script src="build/react.js"></script>
     <script src="build/react-dom.js"></script>
     <script src="build/browser.min.js"></script>
-	<link href="css/general.css" rel="stylesheet" type="text/css">
-	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
-	<!-- <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<div id="general_hw">
 		<div class="breadcrumb" id="breadcrumb">
-
 		</div>
+		<div class="after-crumb"></div>
 		<div id="choose_hw_div">
 			<div class="book_cover">
 				<h3 class="book_title">
 					上海牛津英语<span class="book_ver">6A</span>
 				</h3>
 				<button type="button" id="change_book_btn" 
-				data-toggle="modal" data-target="#book_list">
-				换教材</button>
+					data-toggle="modal" data-target="#book_list">
+					换教材</button>
 			</div >
 			<div class="unit_hw">
 				<ul id="unit_hw_ul">
 				</ul>
 			</div>
 		</div>
+
 		<div id="assign_hw_div">
 			<button type="button"it1>布置<span>智能</span>作业</button>
 			<button type="button">布置<span>固定</span>作业</button>
@@ -49,8 +52,12 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
-					<form class="div-book" id="bookCoverForm">
-<!-- 						<button type="button" class="btn btn-default btn-book">
+					<form class="div-book">
+						<button type="button" class="btn btn-default btn-book">
+							上海牛津英语</br>
+							<span class="book-subtitle">6A</span>
+						</button>
+						<button type="button" class="btn btn-default btn-book">
 							上海牛津英语</br>
 							<span class="book-subtitle">7A</span>
 						</button>
@@ -65,7 +72,7 @@
 						<button type="button" class="btn btn-default btn-book">
 							上海牛津英语</br>
 							<span class="book-subtitle">10A</span>
-						</button> -->
+						</button>
 					</form>
 					<div class="modal-ctrl">
 						<button type="button" class="btn btn-primary">
@@ -80,18 +87,29 @@
 		</div>
 	</div>
 </body>
-
 <script type="text/babel">
 	var breadcrumbs = ['教材与单元', '选择知识体系', '知识点选择' ,'题目选择', '布置保存'];
+	var currentBread = 0;
+	var breadState = [];
+	for (var i = 0; i < breadcrumbs.length; ++i)
+	{
+		if( i < currentBread)
+			breadState[i] = "clickable";
+		else if(i == currentBread)
+			breadState[i] = "currentBread";
+	}
 	ReactDOM.render(
 		<div>
 		{
-		  breadcrumbs.map(function (breadcrumb) {
-		    return <li><a href="#"><span className="icon icon-home"></span>{breadcrumb}</a></li>
+		  breadcrumbs.map(function (breadcrumb, index) {
+		    return <li className={index < currentBread? "clickable" : ""} 
+		    		   id={index == currentBread? "currentBread" : ""}>
+		    		<a href="#">{breadcrumb}</a></li>
 		  })
 		}
+
 		</div>,
-		document.getElementById('breadcrumb')
+		document.getElementsByClassName('breadcrumb')[0]
 	);
 	var units = ['一', '二', '三' ,'四', '五', '六'];
 	var UnitClick = React.createClass({
@@ -123,30 +141,20 @@
 		}</ul>,
 		document.getElementById('unit_hw_ul')
 	);
-	var books = ['6A', '7A', '8A', '9A', '10A'];
-	var BookBtn = React.createClass({
-		render: function() {
-			return (
-				<button typeName="button" className="btn btn-default btn-book">
-				<span className="book-subtitle">{this.props.book}</span>
-				</button>
-			);
-		}
-	});
-	ReactDOM.render(
-		<p>
-		{
-			books.map(function (book) {
-				return <Bookbtn title={book}/>
-					
-			})
-		}
-		</p>,
-		document.getElementById('bookCoverForm')
-	);	
+	// var books = ['6A', '7A', '8A', '9A', '10A'];
+	// ReactDOM.render(
+	// 	<form className="div-book">
+	// 	{
+	// 		books.map(function (book) {
+	// 			return 
+	// 			<button type="button" className="btn btn-default btn-book">
+	// 			<span className="book-subtitle">{book}</span>
+	// 			</button>
+	// 		})
+	// 	}
+	// 	</form>,		
+	// 	document.getElementById('bookcover_div')
+	// );	
 </script>
-
 <script async src="js/teacher_access.js"></script>
 </html>
-
-
