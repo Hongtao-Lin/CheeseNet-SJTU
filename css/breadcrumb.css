@@ -1,15 +1,9 @@
-
-
 .breadcrumb{
 	list-style: none;
 	display: inline-block;
 	background-color: #44BFCD !important;
 	padding: 1px 0px 1px 1px !important;
 	
-}
-
-.breadcrumb .icon {
-	font-size: 14px;
 }
 
 .breadcrumb li {
@@ -41,9 +35,6 @@
 
 .breadcrumb li:first-child a:before{
 	border: none;
-}
-.breadcrumb li:last-child {
-	/*margin-right: -22px;*/
 }
 
 .breadcrumb li a:before, .breadcrumb li a:after{
@@ -82,16 +73,52 @@
 	border-left-color: white;
 }
 
+.breadcrumb > li+li:before{
+	padding: 0;
+	color: #FFF;
+	content: none !important;
+}
+
+.breadcrumb li a:active{
+	background-color: white;
+}
+
+
+/* clickable list*/
+.breadcrumb li.clickable a {
+	background-color: #E1F4F8;
+}
+
+.breadcrumb li.clickable a:before{
+	border-color: #E1F4F8;	
+	border-left-color: transparent;
+}
+
+.breadcrumb li.clickable a:after{
+	border-left-color: #E1F4F8;
+}
+
+.breadcrumb li.clickable a:active {
+	background-color: #E1F4F8;
+}
+
 .breadcrumb li.clickable a:hover {
 	background-color: #9FE0E8;
 	/*color: white;*/
 	opacity: 1;
 }
 
-.breadcrumb li.clickable a {
-	background-color: #E1F4F8;
+.breadcrumb li.clickable a:hover:before{
+	border-color: #9FE0E8;	
+	border-left-color: transparent;
 }
 
+.breadcrumb li.clickable a:hover:after{
+	border-left-color: #9FE0E8;
+}
+
+
+/* current bread.*/
 .breadcrumb #currentBread a:before{
 	border-color: #44bfcd;
 	border-left-color: transparent;
@@ -106,41 +133,6 @@
 	color: white;
 }
 
-.breadcrumb li.clickable a:hover:before{
-	border-color: #9FE0E8;	
-	border-left-color: transparent;
-	/*actived: #44bfcd*/
-}
-
-.breadcrumb li.clickable a:before{
-	border-color: #E1F4F8;	
-	border-left-color: transparent;
-	/*actived: #44bfcd*/
-}
-
-.breadcrumb li.clickable a:hover:after{
-	border-left-color: #9FE0E8;
-}
-
-.breadcrumb li.clickable a:after{
-	border-left-color: #E1F4F8;
-}
-
-
-.breadcrumb li a:active{
-	background-color: #C4CACA;
-}
-
-.breadcrumb > li+li:before{
-	padding: 0;
-	color: #FFF;
-	content: none !important;
-}
-
-.breadcrumb li.clickable a:active {
-	background-color: #E1F4F8;
-}
-
 .after-crumb {
     width: 0px;
     height: 0;
@@ -153,3 +145,4 @@
     border-color: white;
     border-left-color: transparent;
 }
+

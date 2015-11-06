@@ -3,7 +3,7 @@ $(document).ready(function() {
 		var check = $(this).find(".fa-stack").first();
 		if( $(check).find(".fa-check").length ){
 			$(check).find(".fa-check").removeClass("fa-check");
-			$(this).css("background-color", "#E7E7E7");
+			$(this).css("background-color", "");
 		}
 		else{
 			$(check).find(".fa-stack-1x").addClass("fa-check");

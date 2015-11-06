@@ -14,17 +14,21 @@
 	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-    <script src="build/react.js"></script>
-    <script src="build/react-dom.js"></script>
-    <script src="build/browser.min.js"></script>
+	<script src="js/teacher_access.js"></script>
 
 </head>
 <body>
 	<div id="general_hw">
-		<div class="breadcrumb" id="breadcrumb">
+		<div class="breadcrumb">
+		<div>
+			<li id="currentBread"><a href="#">教材与单元</a></li>
+			<li><a href="#">选择知识体系</a></li>
+			<li><a href="#">知识点选择</a></li>
+			<li><a href="#">题目选择</a></li>
+			<li><a href="#">布置保存</a></li>
+		</div>
 		</div>
 		<div class="after-crumb"></div>
 		<div id="choose_hw_div">
@@ -37,11 +41,16 @@
 					换教材</button>
 			</div >
 			<div class="unit_hw">
-				<ul id="unit_hw_ul">
+				<ul>
+					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元一</span>Title of Unit1</li>
+					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元二</span>Title of Unit1</li>
+					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元三</span>Title of Unit1</li>
+					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元四</span>Title of Unit1</li>
+					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元五</span>Title of Unit1</li>
+					<li><span class="fa-stack"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-lg  fa-stack-1x"></i></span><span>单元六</span>Title of Unit1</li>
 				</ul>
 			</div>
 		</div>
-
 		<div id="assign_hw_div">
 			<button type="button"it1>布置<span>智能</span>作业</button>
 			<button type="button">布置<span>固定</span>作业</button>
@@ -87,74 +96,4 @@
 		</div>
 	</div>
 </body>
-<script type="text/babel">
-	var breadcrumbs = ['教材与单元', '选择知识体系', '知识点选择' ,'题目选择', '布置保存'];
-	var currentBread = 0;
-	var breadState = [];
-	for (var i = 0; i < breadcrumbs.length; ++i)
-	{
-		if( i < currentBread)
-			breadState[i] = "clickable";
-		else if(i == currentBread)
-			breadState[i] = "currentBread";
-	}
-	ReactDOM.render(
-		<div>
-		{
-		  breadcrumbs.map(function (breadcrumb, index) {
-		    return <li className={index < currentBread? "clickable" : ""} 
-		    		   id={index == currentBread? "currentBread" : ""}>
-		    		<a href="#">{breadcrumb}</a></li>
-		  })
-		}
-
-		</div>,
-		document.getElementsByClassName('breadcrumb')[0]
-	);
-	var units = ['一', '二', '三' ,'四', '五', '六'];
-	var UnitClick = React.createClass({
-		getInitialState: function() {
-			return {chosen: false};
-		},
-		handleClick: function(event) {
-			this.setState({chosen: !this.state.chosen});
-		},
-		render: function() {
-			var text = this.state.chosen ? 'fa-check' : '';
-			return (
-				<li onClick={this.handleClick}>
-					<span className="fa-stack">
-						<i className="fa fa-square fa-stack-2x"></i>
-						<i className="fa fa-lg fa-stack-1x"></i>
-					</span>
-					<span>{'单元'+this.props.title}</span>
-					Title of Unit1
-				</li>
-			);
-		}
-	});
-	ReactDOM.render(
-		<ul>{
-			units.map(function (unit) {
-				return <UnitClick title={unit} />
-			})
-		}</ul>,
-		document.getElementById('unit_hw_ul')
-	);
-	// var books = ['6A', '7A', '8A', '9A', '10A'];
-	// ReactDOM.render(
-	// 	<form className="div-book">
-	// 	{
-	// 		books.map(function (book) {
-	// 			return 
-	// 			<button type="button" className="btn btn-default btn-book">
-	// 			<span className="book-subtitle">{book}</span>
-	// 			</button>
-	// 		})
-	// 	}
-	// 	</form>,		
-	// 	document.getElementById('bookcover_div')
-	// );	
-</script>
-<script async src="js/teacher_access.js"></script>
 </html>
