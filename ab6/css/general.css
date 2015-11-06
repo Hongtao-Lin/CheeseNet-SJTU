@@ -8,9 +8,10 @@ li{
 ul{
 	padding-left:0px;
 }
-.container{
+.container_new{
 	width:1000px;
 	margin:auto;
+	margin-top:10px;
 }
 
 #general_hw {
@@ -27,15 +28,18 @@ ul{
 	width:270px;
 	background-color: #f1f1f1;
 	padding:10px 15px;
-	margin-left:6px;
+	margin-left:20px;
 	margin-top:10px;
 	border-radius: 10px;
+	height:544px;
+	overflow: scroll;
 }
 
 .left-bar-title{
 	color:#acaba9;
 	font-size:16px;
 	margin-bottom:20px;
+
 } 
 
 .exercise_board{
@@ -46,7 +50,7 @@ ul{
 	margin-bottom:10px;
 }
 .exercise_list li{
-	margin-top:2px;
+	margin-top:4px;
 	height:50px;
 }
 .exercise_list li .exercise_li_left{
@@ -55,4 +59,57 @@ ul{
 	position:relative;
 	float:left;
 	background-color: #d2dfe8;
+}
+.exercise_list li .exercise_li_left div{
+	text-align: center;
+	line-height:17px;
+	font-size: 12px;
+}
+.exercise_list li .exercise_li_left .exercise_add,.exercise_min{
+	background: #b5b5b5;
+	color:white;
+}
+.exercise_list li .exercise_li_left .exercise_add{
+	border-radius:5px 0 0 0;
+}
+.exercise_list li .exercise_li_left .exercise_min{
+	border-radius:0px 0 0 5px;
+}
+.exercise_list li .exercise_li_right{
+	background-color: white;
+	border-radius: 0 5px 5px 0;
+	height:50px;
+	padding-left:36px;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#857b6f;
+}
+.exercise_li_right div{
+	position: relative;
+}    
+.exercise_li_right div span{
+	position: absolute;
+    right: 7px;
+    top: 14px;
+}    
+.close_new {
+    /* still bad on picking color */
+    background: #cccccc;
+    color: white;
+    /* make a round button */
+    border-radius: 12px;
+    /* center text */
+    line-height: 12px;
+    text-align: center;
+    height: 16px;
+    width: 16px;
+    font-size: 12px;
+    padding: 1px;
+}
+.close_new:hover{
+	background: #f37c7e;
+}
+/* use cross as close button */
+.close_new::before {
+    content: "\00D7";
 }
