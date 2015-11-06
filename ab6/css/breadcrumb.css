@@ -1,14 +1,9 @@
-
-
-.breadcrumb {
+.breadcrumb{
 	list-style: none;
 	display: inline-block;
-	background-color: #ffffff !important;
+	background-color: #44BFCD !important;
+	padding: 1px 0px 1px 1px !important;
 	
-}
-
-.breadcrumb .icon {
-	font-size: 14px;
 }
 
 .breadcrumb li {
@@ -23,21 +18,11 @@
 	height: 40px;
 	line-height: 40px;
 	padding: 0 10px 0 5px;
-	margin-right: 23px;
+	margin-right: 21px;
 	color: black;
 	cursor: default;
-	background-color: rgba(69, 191, 205, 0.5);
+	background-color: white;
 }
-
-/*.breadcrumb li .first-item{
-	opacity: 0.8;
-}
-.breadcrumb li .sec-item{
-	opacity: 0.5;
-}
-.breadcrumb li .third-item{
-	opacity: 0.2;
-}*/
 
 .breadcrumb li:first-child a {
   padding-left: 15px;
@@ -51,9 +36,6 @@
 .breadcrumb li:first-child a:before{
 	border: none;
 }
-.breadcrumb li:last-child {
-	margin-right: 0;
-}
 
 .breadcrumb li a:before, .breadcrumb li a:after{
 	content: "";
@@ -63,7 +45,7 @@
 	height: 0;
 	border: 0 solid transparent;
 	border-width: 20px 10px;
-	border-color: rgba(69, 191, 205, 0.5);
+	border-color: white;
 }
 
 
@@ -88,32 +70,79 @@
 .breadcrumb li a:after {
 	left: 100%;
 	border-color: transparent;
-	border-left-color: rgba(69, 191, 205, 0.5);
+	border-left-color: white;
 }
 
-.breadcrumb li a:hover {
-	background-color: #44BFCD;
-	color: white;
-	opacity: 1;
-}
-
-
-.breadcrumb li a:hover::before{
-	border-color: #44BFCD;
-	border-left-color: transparent;
-	opacity: 1;
-}
-.breadcrumb li a:hover:after{
-	border-left-color: #44BFCD;
-	opacity: 1;	
-}
-
-.breadcrumb li a:active{
-	background-color: #C4CACA;
-}
-
-.breadcrumb>li+li:before{
+.breadcrumb > li+li:before{
 	padding: 0;
 	color: #FFF;
 	content: none !important;
 }
+
+.breadcrumb li a:active{
+	background-color: white;
+}
+
+
+/* clickable list*/
+.breadcrumb li.clickable a {
+	background-color: #E1F4F8;
+}
+
+.breadcrumb li.clickable a:before{
+	border-color: #E1F4F8;	
+	border-left-color: transparent;
+}
+
+.breadcrumb li.clickable a:after{
+	border-left-color: #E1F4F8;
+}
+
+.breadcrumb li.clickable a:active {
+	background-color: #E1F4F8;
+}
+
+.breadcrumb li.clickable a:hover {
+	background-color: #9FE0E8;
+	/*color: white;*/
+	opacity: 1;
+}
+
+.breadcrumb li.clickable a:hover:before{
+	border-color: #9FE0E8;	
+	border-left-color: transparent;
+}
+
+.breadcrumb li.clickable a:hover:after{
+	border-left-color: #9FE0E8;
+}
+
+
+/* current bread.*/
+.breadcrumb #currentBread a:before{
+	border-color: #44bfcd;
+	border-left-color: transparent;
+}
+
+.breadcrumb #currentBread a:after{
+	border-left-color: #44bfcd;
+}
+
+.breadcrumb #currentBread a{
+	background-color: #44bfcd;
+	color: white;
+}
+
+.after-crumb {
+    width: 0px;
+    height: 0;
+    margin-left: -25px;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    border: 0 solid transparent;
+    border-width: 21px 10px;
+    border-color: white;
+    border-left-color: transparent;
+}
+
