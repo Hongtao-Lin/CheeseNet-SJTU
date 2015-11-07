@@ -123,9 +123,16 @@ a {
 
 .modal-ctrl>button{
 	font-size: 19px !important;
-	margin: 3% 3%;
+	margin: 3% 2%;
 	width: 10%;
-	height: 60%;
+	height: 70%;
+}
+
+.modal-ctrl>button.btn-default{
+	color: #44BFCD !important;
+}
+.modal-ctrl>button.btn-primary{
+	background-color: rgb(48,168,182) !important;
 }
 
 .modal-dialog{
@@ -140,16 +147,31 @@ a {
 .btn-book{
 	padding: 20px 15px !important;
 	font-size: 20px !important;
-	margin: 3% 1%;
+	margin: 4% 1%;
+	border-radius: 10px !important;
 }
 
 .btn-default{
 	background-color: #E7E7E7 !important;
 }
 
-span.book-subtitle{
+.btn-book>span.book-subtitle{
+	display: block;
 	font-size: 30px;
-	margin: 2% auto;
+	margin: 10% 0 0 0;
+}
+
+.btn-default>span.book-subtitle{
+	color: #44BFCD;
+}
+
+.btn-info>span.book-subtitle{
+	color: white;
+}
+
+.btn-info{
+	background-color: rgb(71, 219, 184) !important; 
+	border-color: rgb(71, 219, 184) !important;
 }
 
 .footer_div {
@@ -179,4 +201,37 @@ span.book-subtitle{
 .footer_div button span {
 	font-size: 1.5em;
 	font-weight: bold;
+}
+
+.article-table th{
+	border: none !important;
+	vertical-align: middle !important;
+}
+
+.div-article-main{
+	overflow: scroll;
+	height: 700px;
+}
+
+.article-tbody th{
+	background-color: rgb(242,242,242);
+}
+
+.article-detail{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.article-row>th:first-child{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.article-table{
+	border-spacing: 0 5px;
+    border-collapse: separate;
+}
+
+.article-row>th>i{
+	font-size: 30px;
 }
