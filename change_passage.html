@@ -18,8 +18,11 @@
 	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.nanoscroller.min.js"></script>
-	<script src="js/change_passage.js"></script>
+		<link  href="css/jquery.rollbar.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.rollbar.min.js"></script>
+	<script src="js/handle_question.js"></script>
 
 </head>
 <body>
@@ -36,118 +39,119 @@
 			</div>
 			<div class="after-crumb"></div>
 		</div>
-		<!-- <div class="nano" id="left-bar"> -->
-			<div class="left-bar nano-content">
-				<h5 class="left-bar-title">已选知识点</h5>
-				<div class="exercise_board">
-					<h5 class="exercise_title">词汇语法</h5>
-					<ul class="exercise_list">
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="exercise_board">
-					<h5 class="exercise_title">阅读理解</h5>
-					<ul class="exercise_list">
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="exercise_board">
-					<h5 class="exercise_title">视频理解</h5>
-					<ul class="exercise_list">
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-						<li>
-							<div class="exercise_li_left">
-								<div class="exercise_add">+</div>
-								<div class="exercise_num">2题</div>
-								<div class="exercise_min">-</div>
-							</div>
-							<div class="exercise_li_right">
-								<div>being look foward to something<span class="close_new"></span></div>
-							</div>
-						</li>
-					</ul>
-				</div>
+		<div class="left-bar">
+		<div class="scroll-container">
+			<h5 class="left-bar-title">已选知识点</h5>
+			<div class="exercise_board">
+				<h5 class="exercise_title">词汇语法</h5>
+				<ul class="exercise_list">
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+				</ul>
 			</div>
-		<!-- </div> -->
+			<div class="exercise_board">
+				<h5 class="exercise_title">阅读理解</h5>
+				<ul class="exercise_list">
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="exercise_board">
+				<h5 class="exercise_title">视频理解</h5>
+				<ul class="exercise_list">
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
 		<div class="right-bar">
 			<h3>换文章/题型</h3>
+			<div class="scroll-container">
 			<div class="div-article-main">
 				<table class="table table-condensed article-table">
 					<thead class="article-thead">
@@ -553,6 +557,7 @@
 						</tr>
 					</tbody>
 				</table>
+			</div>
 			</div>
 			<div class="footer_div">
 				<button type="button">下一步</button>

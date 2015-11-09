@@ -16,7 +16,13 @@
 	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
 	<link  href="css/choose_question.css" rel="stylesheet" type="text/css">
 	<script src="js/jquery.min.js"></script>
+	<link  href="css/jquery.rollbar.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.rollbar.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/handle_question.js"></script>
+
 
 </head>
 <body>
@@ -34,6 +40,7 @@
 			<div class="after-crumb"></div>
 		</div>
 		<div class="left-bar">
+		<div class="scroll-container">
 			<h5 class="left-bar-title">已选知识点</h5>
 			<div class="exercise_board">
 				<h5 class="exercise_title">词汇语法</h5>
@@ -141,6 +148,7 @@
 				</ul>
 			</div>
 		</div>
+		</div>
 		<div class="right-bar">
 			<div>
 				<h3>布置固定作业</h3>
@@ -158,6 +166,7 @@
 				</ul>
 			</div>
 			<div class="choose_list">
+			<div class="scroll-container">
 				<ul>
 					<li>
 						<h4>词汇短语/语法词法</h4>
@@ -202,6 +211,7 @@
 						</ul>
 					</li>
 				</ul>
+			</div>
 			</div>
 			<div class="footer_div">
 				<button type="button">下一步</button>

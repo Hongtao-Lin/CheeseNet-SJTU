@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- for responsive design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- http-equiv: provide a type/value term -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Assessment builder for cheesenet">
+	<meta name="author" content="Newbee studio">
+	<meta name="keyword" content="Assessment_builder cheesenet">
+	<title>Asscessment Builder</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/general.css" rel="stylesheet" type="text/css">
+	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
+	<link  href="css/choose_question.css" rel="stylesheet" type="text/css">
+	<link  href="css/jquery.rollbar.css" rel="stylesheet" type="text/css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.rollbar.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/handle_question.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+		<div class="breadcrumb_contain">
+			<div class="breadcrumb">
+				<div>
+					<li class="clickable"><a href="#">教材与单元</a></li>
+					<li class="clickable"><a href="#">选择知识体系</a></li>
+					<li class="clickable"><a href="#">知识点选择</a></li>
+					<li id="currentBread"><a href="#">题目选择</a></li>
+					<li><a href="#">布置保存</a></li>
+				</div>
+			</div>
+			<div class="after-crumb"></div>
+		</div>
+		<div class="left-bar">
+		<div class="scroll-container">
+			<h5 class="left-bar-title">已选知识点</h5>
+			<div class="exercise_board">
+				<h5 class="exercise_title">词汇语法</h5>
+				<ul class="exercise_list">
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="exercise_board">
+				<h5 class="exercise_title">阅读理解</h5>
+				<ul class="exercise_list">
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="exercise_board">
+				<h5 class="exercise_title">视频理解</h5>
+				<ul class="exercise_list">
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div class="right-bar">
+			<div>
+				<h3>布置固定作业</h3>
+			</div>
+			<div class="choose_list">
+			<div class="scroll-container">
+				<div id="total_count_div"><span>总题数</span><span id="total_num">20</span></div>
+				<ul>
+					<li>
+						<h4>词汇短语/语法词法</h4>
+						<div class="count_div"><span class="part_num">10</span><span>道题</span></div>
+						<ul class="type_list">
+							<li>
+								<div class="know_point">
+									<div><span>知识点<span><span>1</span></div>
+									<span>be looking forward to doing something</span>
+								</div>
+								<button type="button" class="add_button">加题</button>
+								<ul class="question_detail_list">
+									<li>
+										<ul class="question_op">
+											<li class="exit_op"><i class="fa fa-times"></i></li>
+											<li><a href="#">换</a></li>
+										</ul>
+										<div class="choice">
+											<div class="question_desc">单选题</div>
+											<div class="question_content">
+												<p>I ___ there when the accident happened.</p>
+												<ul class="question_options">
+													<li><span>A.</span><span>am</span></li>
+													<li><span>B.</span><span>is</span></li>
+													<li class="right_answer"><span>C.</span><span>was</span></li>
+													<li><span>D.</span><span>were</span></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+										<ul class="question_op">
+											<li class="exit_op"><i class="fa fa-times"></i></li>
+											<li><a href="#">换</a></li>
+										</ul>
+										<div class="choice">
+											<div class="question_desc">单选题</div>
+											<div class="question_content">
+												<p>I ___ there when the accident happened.</p>
+												<ul class="question_options">
+													<li><span>A.</span><span>am</span></li>
+													<li><span>B.</span><span>is</span></li>
+													<li class="right_answer"><span>C.</span><span>was</span></li>
+													<li><span>D.</span><span>were</span></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="know_point">
+									<div><span>知识点<span><span>1</span></div>
+									<span>be looking forward to doing something</span>
+								</div>
+								<button type="button" class="add_button">加题</button>
+								<ul class="question_detail_list">
+									<li>
+										<ul class="question_op">
+											<li class="exit_op"><i class="fa fa-times"></i></li>
+											<li><a href="#">换</a></li>
+										</ul>
+										<div  class="choice">
+											<div class="question_desc">单选题</div>
+											<div class="question_content">
+												<p>I ___ there when the accident happened.</p>
+												<ul class="question_options">
+													<li><span>A.</span><span>am</span></li>
+													<li><span>B.</span><span>is</span></li>
+													<li class="right_answer"><span>C.</span><span>was</span></li>
+													<li><span>D.</span><span>were</span></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+										<ul class="question_op">
+											<li class="exit_op"><i class="fa fa-times"></i></li>
+											<li><a href="#">换</a></li>
+										</ul>
+										<div  class="choice">
+											<div class="question_desc">单选题</div>
+											<div class="question_content">
+												<p>I ___ there when the accident happened.</p>
+												<ul class="question_options">
+													<li><span>A.</span><span>am</span></li>
+													<li><span>B.</span><span>is</span></li>
+													<li class="right_answer"><span>C.</span><span>was</span></li>
+													<li><span>D.</span><span>were</span></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>阅读理解</h4>
+						<button type="button" class="add_button">加题</button>
+						<div class="count_div"><span class="part_num">5</span><span>道题</span></div>
+						<div class="count_div"><span class="part_num">1</span><span>文章</span></div>
+						<ul class="question_detail_list passage_div">
+						<li>
+						<div>
+							<ul class="question_op">
+								<li class="exit_op"><i class="fa fa-times"></i></li>
+								<li><a href="#">换</a></li>
+							</ul>
+							<div class="passage">
+								<div class="question_desc">
+									<select name="select">
+										<option value="选词填空">选词填空</option>
+										<option value="其他">其他</option>
+									</select>
+									<select name="select">
+										<option value="5">5题</option>
+										<option value="6">6题</option>
+									</select>
+								</div>
+								<div class="question_content">
+									<div>
+										<p>将右边单词或词组对应的字母编号填入文章表格。每空限填一次，每词只能填一次。</p>
+										<p>It was a cold winter afternoon before Christmas.My parents and I sat on the bench in Washington, D.C.’s Union Station,waiting for the train.Inside the waiting hall were many people.</p>
+										<p>A boy sat nearby.His worn jacket,pale face,dirty hands all seemed to tell me that he was homeless. “He must be cold and hungry.Maybe I should help him,”I said to myself.</p>
+										<p>Putting the meal box aside,the boy stood up and helped the old man to his seat.He took off his jacket and covered it over the old man’s shoulders,saying, “A gentleman brought me this warm meal but I just finished eating.I hate to waste good food.Can you help me out?”He placed the stillwarm meal box in the old man’s hands without waiting for an answer.</p>
+									</div>
+									<div>
+										<ul class="question_options">
+											<li><span>A.</span><span>am</span></li>
+											<li><span>B.</span><span>is</span></li>
+											<li><span>C.</span><span>was</span></li>
+											<li><span>D.</span><span>was</span></li>
+											<li><span>E.</span><span>was</span></li>
+											<li><span>F.</span><span>was</span></li>
+											<li><span>G.</span><span>was</span></li>
+											<li><span>H.</span><span>was</span></li>
+										</ul>
+										<ul class="question_answers">
+											<li><span>1</span><span>A</span></li>
+											<li><span>2</span><span>A</span></li>
+											<li><span>3</span><span>A</span></li>
+											<li><span>4</span><span>A</span></li>
+											<li><span>5</span><span>A</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						</li>
+						</ul>
+					</li>
+					<li>
+						<h4>视频理解</h4>
+						<button type="button" class="add_button">加题</button>
+						<div class="count_div"><span class="part_num">6</span><span>道题</span></div>
+						<div class="count_div"><span class="part_num">1</span><span>视频</span></div>
+						<ul class="question_list">
+							<li>take care of somebody</li>
+							<li>take care of somebody</li>
+							<li>take care of somebody</li>
+							<li>take care of somebody</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<div class="footer_div">
+				<button type="button">下一步</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
