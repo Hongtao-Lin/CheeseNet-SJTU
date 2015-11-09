@@ -248,12 +248,18 @@ i.fa-circle.fa-stack-1x{
 
 tr.detail th{
 	background-color: white !important;
+	padding: 0 0 5px 0;
 }
 
 tr.detail>th>div>div{
-	padding: 7% 3%; 
+	padding: 4% 3%; 
+	margin-top: -10px;
+}
+
+.div-aritcle{
 	border-style: none dotted;
-	border-width: 1px;
+	border-width: 0px;
+	border-right-width: 1px;
 }
 
 tr.detail>th>div{
