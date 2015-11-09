@@ -245,3 +245,20 @@ i.fa-circle.fa-stack-1x{
 {
 	color: white;
 }
+
+tr.detail th{
+	background-color: white !important;
+}
+
+tr.detail>th>div>div{
+	padding: 7% 3%; 
+	border-style: none dotted;
+	border-width: 1px;
+}
+
+tr.detail>th>div{
+	width: 100%;
+	margin: 0;
+	border-style: none dotted dotted dotted;
+	border-width: 1px;
+}
