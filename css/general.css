@@ -77,6 +77,11 @@ p, span, h4, h5, li{
 	border-radius: 8px;
 }
 
+#change_book_btn:hover, .footer_div button:hover, .add_button:hover{
+	background-color: #3CA9B6;
+}
+
+
 .unit_hw {
 	display: inline-block;
 	margin-left: 10px;
@@ -95,6 +100,7 @@ p, span, h4, h5, li{
 	background-color: #E7E7E7;
 	border-radius: 5px;
 	text-align: left;
+	cursor: pointer;
 	transition: background-color 200ms ease;
     -o-transition: background-color 200ms ease;
     -moz-transition: background-colo 200ms ease;
@@ -250,6 +256,7 @@ p, span, h4, h5, li{
 	width:280px;
 	background-color: #f1f1f1;
 	margin-top:10px;
+	padding-top: 20px;
 	border-radius: 10px;
 	height:544px;
 }
@@ -354,7 +361,7 @@ p, span, h4, h5, li{
     padding: 3px 25px 2px 18px;
 	border: 0;
 	border-radius: 5px;
-	background-color: #31A8B5;
+	background-color: #44BFCD;
 	color: white;
 	display: inline-block;
 	margin-bottom: 10px;

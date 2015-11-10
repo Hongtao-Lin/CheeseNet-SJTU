@@ -9,6 +9,10 @@
 
 .breadcrumb li {
 	float: left;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
 }
 
 .breadcrumb li a {
@@ -21,8 +25,12 @@
 	padding: 0 10px 0 5px;
 	margin-right: 21px;
 	color: black;
-	/*cursor: default;*/
+	cursor: default;
 	background-color: white;
+}
+
+.breadcrumb .clickable a, .breadcrumb #currentBread a{
+	cursor: pointer;
 }
 
 .breadcrumb li:first-child a {

@@ -163,6 +163,13 @@
 	background-color: #F1F1F1;
 }
 
+.article-table tr{
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+}
+
 .article-table th{
 	border: none !important;
 	vertical-align: middle !important;
@@ -239,6 +246,7 @@ i.fa-circle.fa-stack-1x{
 .article-table .btn{
 	padding: 1px 6px !important;
 	background-color: #2EA8B6;
+	border: 0	;
 }
 
 .article-row-selected
