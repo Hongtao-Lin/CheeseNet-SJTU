@@ -16,7 +16,7 @@ $(document).ready(function() {
 		pathPaddingBottom: '-10px',
 	});
 
-	$(function(){
+	/*$(function(){
 		$(".article-row th:first-child, .article-row th:nth-child(2)").click(function(){
 			var area = $(this).parent().children(".fa-stack");
 			// alert(area);
@@ -24,10 +24,10 @@ $(document).ready(function() {
 			$(area).find(".fa-stack-1x").toggleClass("fa-circle");
 			$(area).find(".fa-stack-1x").toggleClass("fa-check");
 
-			$(".left-bar").load("/teacher_accessment_0.html")
+			//$(".left-bar").load("teacher_accessment_0.html")
 
 		});
-	});
+	});*/
 
 	$(function(){
 		$(".question_list li").click(function(){
