@@ -375,3 +375,7 @@ p, span, h4, h5, li{
 .scroll-container{
 	margin-top: -20px;
 }
+
+.subtitle{
+	color:#727480;
+}
