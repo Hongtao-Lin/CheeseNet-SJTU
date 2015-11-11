@@ -12,8 +12,8 @@ $(document).ready(function() {
 		scroll: 'vertical',
 		autoHide: true,
 		sliderSize: "20%",
-		pathPaddingTop: '10px',
-		pathPaddingBottom: '-10px',
+		// pathPaddingTop: '0px',
+		// pathPaddingBottom: '-10px',
 	});
 
 	$(function(){
