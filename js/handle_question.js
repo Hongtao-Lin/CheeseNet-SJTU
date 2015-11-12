@@ -35,4 +35,21 @@ $(document).ready(function() {
 		});
 	});
 
+	$(function(){
+		$(".question_op a").click(function(){
+			$("#right-bar-base").css('display','none');
+			$("#select_rightbar").css('width','0px');
+			$("#select_rightbar").css('display','block');
+			$("#select_rightbar").animate({width:"940px"});
+		});
+		$(".replace_toggle").click(function(){
+			$("#select_rightbar").animate({width:"10px"},400);
+			setTimeout(function(){
+				$("#select_rightbar").css('display','none');
+				$("#right-bar-base").css('display','block');
+			},400);
+			
+		});
+	});
+
 });
