@@ -15,13 +15,16 @@
 	<link href="css/general.css" rel="stylesheet" type="text/css">
 	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
 	<link  href="css/choose_question.css" rel="stylesheet" type="text/css">
-	<script src="js/jquery.min.js"></script>
 	<link  href="css/jquery.rollbar.css" rel="stylesheet" type="text/css">
+	<link href="css/replace_question.css" rel="stylesheet" type="text/css">
+
+	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easing.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/jquery.rollbar.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/handle_question.js"></script>
+	<script src="js/v9.js"></script>
 
 
 </head>
@@ -32,8 +35,8 @@
 				<div>
 					<li class="clickable"><a href="#">教材与单元</a></li>
 					<li class="clickable"><a href="#">选择知识体系</a></li>
-					<li id="currentBread"><a href="#">知识点选择</a></li>
-					<li><a href="#">题目选择</a></li>
+					<li class="clickable"><a href="#">知识点选择</a></li>
+					<li id="currentBread"><a href="#">题目选择</a></li>
 					<li><a href="#">布置保存</a></li>
 				</div>
 			</div>
@@ -149,72 +152,126 @@
 			</div>
 		</div>
 		</div>
-		<div class="right-bar">
-			<div>
-				<h3>布置固定作业</h3>
-				<div class="search_div">
-					<input type="text" placeholder="关键词..." />
-					<button type="button">搜索</button>
+		<div class="right-bar" id="select_rightbar">
+			<div class="select_padding_fix">
+				<div class="replace_toggle">
+				</div>
+				<div>
+					<h3>换题</h3>
+					<h4 class="subtitle">Choose a question to replace:</h4>
+				</div>
+				<div class="scroll-container">
+					<form id="select_form">
+						<div class="choice " >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="choice" >
+							<div class="question_desc">单选题</div>
+							<input type="radio" name="replace_q" value="" class="select_radio"/>
+							<div class="question_content">
+								<p>I ___ there when the accident happened.</p>
+								<ul class="question_options">
+									<li><span>A.</span><span>am</span></li>
+									<li><span>B.</span><span>is</span></li>
+									<li class="right_answer"><span>C.</span><span>was</span></li>
+									<li><span>D.</span><span>were</span></li>
+								</ul>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
-			<div id="nav_div">
-				<ul>
-				<li><a href="">词汇短语</a></li>
-				<li><a href="">语法句法</a></li>
-				<li><a href="">阅读短语</a></li>
-				<li class="last"><a href="">视频句法</a></li>
-				</ul>
-			</div>
-			<div class="choose_list">
-			<div class="scroll-container">
-				<ul>
-					<li>
-						<h4>词汇短语/语法词法</h4>
-						<ul class="type_list">
-							<li>
-								<h5>词汇短语</h5>
-								<ul class="question_list">
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-								</ul>
-							</li>
-							<li>
-								<h5>语法词法</h5>
-								<ul class="question_list">
-									<li>take care of somebody</li>
-									<li>take care of somebody</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<h4>阅读理解</h4>
-						<ul class="question_list">
-							<li>take care of somebody</li>
-							<li>take care of somebody</li>
-							<li>take care of somebody</li>
-						</ul>
-					</li>
-					<li>
-						<h4>视频理解</h4>
-						<ul class="question_list">
-							<li>take care of somebody</li>
-							<li>take care of somebody</li>
-							<li>take care of somebody</li>
-							<li>take care of somebody</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			</div>
 			<div class="footer_div">
-				<button type="button">下一步</button>
+				<button type="button">确定</button>
+				<button type="button">取消</button>
 			</div>
 		</div>
 	</div>

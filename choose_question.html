@@ -15,9 +15,14 @@
 	<link href="css/general.css" rel="stylesheet" type="text/css">
 	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
 	<link  href="css/choose_question.css" rel="stylesheet" type="text/css">
-	
 	<script src="js/jquery.min.js"></script>
+	<link  href="css/jquery.rollbar.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.rollbar.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/handle_question.js"></script>
+
 
 </head>
 <body>
@@ -35,21 +40,40 @@
 			<div class="after-crumb"></div>
 		</div>
 		<div class="left-bar">
+		<div class="scroll-container">
 			<h5 class="left-bar-title">已选知识点</h5>
 			<div class="exercise_board">
 				<h5 class="exercise_title">词汇语法</h5>
 				<ul class="exercise_list">
 					<li>
-						<div class="exercise_li_left"></div>
-						<div class="exercise_li_right"><span>be looking forward to do sth.</span></div>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
 					</li>
 					<li>
-						<div class="exercise_li_left"></div>
-						<div class="exercise_li_right"><span>be looking forward to do sth.</span></div>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
 					</li>
 					<li>
-						<div class="exercise_li_left"></div>
-						<div class="exercise_li_right"><span>be looking forward to do sth.</span></div>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -57,10 +81,33 @@
 				<h5 class="exercise_title">阅读理解</h5>
 				<ul class="exercise_list">
 					<li>
-						<div class="exercise_li_left"></div>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
 						<div class="exercise_li_right">
-						<span>be looking forward to do sth.</span>
-						<span class="exit_icon"><i class="fa fa-times-circle"></i></span>
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
 						</div>
 					</li>
 				</ul>
@@ -69,11 +116,38 @@
 				<h5 class="exercise_title">视频理解</h5>
 				<ul class="exercise_list">
 					<li>
-						<div class="exercise_li_left"></div>
-						<div class="exercise_li_right"><span>be looking forward to do sth.</span></div>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
+					</li>
+					<li>
+						<div class="exercise_li_left">
+							<div class="exercise_add">+</div>
+							<div class="exercise_num">2题</div>
+							<div class="exercise_min">-</div>
+						</div>
+						<div class="exercise_li_right">
+							<div>being look foward to something<span class="close_new"></span></div>
+						</div>
 					</li>
 				</ul>
 			</div>
+		</div>
 		</div>
 		<div class="right-bar">
 			<div>
@@ -85,13 +159,14 @@
 			</div>
 			<div id="nav_div">
 				<ul>
-				<li><a href="">词汇短语</a></li>
-				<li><a href="">语法句法</a></li>
-				<li><a href="">阅读短语</a></li>
-				<li class="last"><a href="">视频句法</a></li>
+				<li><a href="#list-1">词汇短语</a></li>
+				<li><a href="#list-2">语法词法</a></li>
+				<li><a href="#list-3">阅读理解</a></li>
+				<li class="last"><a href="#list-4">视频理解</a></li>
 				</ul>
 			</div>
 			<div class="choose_list">
+			<div class="scroll-container">
 				<ul>
 					<li>
 						<h4>词汇短语/语法词法</h4>
@@ -119,6 +194,8 @@
 						</ul>
 					</li>
 					<li>
+						<a name="#list-3"></a>
+						
 						<h4>阅读理解</h4>
 						<ul class="question_list">
 							<li>take care of somebody</li>
@@ -136,6 +213,7 @@
 						</ul>
 					</li>
 				</ul>
+			</div>
 			</div>
 			<div class="footer_div">
 				<button type="button">下一步</button>
