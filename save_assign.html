@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- for responsive design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- http-equiv: provide a type/value term -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Assessment builder for cheesenet">
+	<meta name="author" content="Newbee studio">
+	<meta name="keyword" content="Assessment_builder cheesenet">
+	<title>Asscessment Builder</title>
+	<link href="css/general.css" rel="stylesheet" type="text/css">
+	<link href="css/save_assign.css" rel="stylesheet" type="text/css">
+	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/save_assign.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="breadcrumb_contain">
+			<div class="breadcrumb">
+				<div>
+					<li class="clickable"><a href="#">教材与单元</a></li>
+					<li class="clickable"><a href="#">选择知识体系</a></li>
+					<li class="clickable"><a href="#">知识点选择</a></li>
+					<li class="clickable"><a href="#">题目选择</a></li>
+					<li id="currentBread"><a href="#">布置保存</a></li>
+				</div>
+			</div>
+			<div class="after-crumb"></div>
+		</div>
+		<div id="assign">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="hw-name" class="col-sm-1 control-label">
+						作业名称</label>
+					<div class="hw-name">
+						<input class="form-control" id="hw-name" placeholder="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="hw-time1" class="col-sm-1 control-label">
+						作业时间</label>
+					<div class="hw-time">
+						<input class="form-control" id="hw-time1" placeholder="">
+					</div>
+					<span>--</span>
+					<div class="hw-time">
+						<input class="form-control" id="hw-time2" placeholder="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="hw-time1" class="col-sm-1 control-label">
+						布置给</label>
+					<div class="hw-for">
+						<div>
+							<div class="hw-class">
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x"></i>
+									<i class="fa fa-square fa-stack-1x"></i>
+								</span>
+								<span>2014级03班</span>
+							</div>
+							<div class="hw-compulsory">
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x"></i>
+									<i class="fa fa-square fa-stack-1x"></i>
+								</span>
+								<span>必做</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="other">
+					<span class="other-toggle">
+						<i class="fa fa-angle-double-right"></i>
+							其他设置
+					</span>
+					<div class="form-group random">
+						<span>选项随机</span>
+						<div class="switch">
+							<input class="tgl tgl-light" id="random" type="checkbox">
+	    					<label class="tgl-btn" for="random">
+	    						<span>on&nbsp;&nbsp;off</span>
+	    					</label>
+    					</div>
+					</div>
+					<div class="form-group single-commit">
+						<span>禁止单题提交</span>
+						<div class="switch">
+							<input class="tgl tgl-light" id="single-commit" type="checkbox">
+	    					<label class="tgl-btn" for="single-commit">
+	    						<span>on&nbsp;&nbsp;off</span>
+	    					</label>
+    					</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="footer_div">
+			<button type="button">保存</button>
+			<button type="button">布置</button>
+		</div>
+	</div>
+</body>
+</html>

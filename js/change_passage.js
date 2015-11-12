@@ -1,11 +1,11 @@
 $(function(){
-	$(".article-row th:first-child, .article-row th:nth-child(2)").click(function(){
-		var area = $(this).parent().children(".fa-stack");
-		// var tr = $(this).parent();
-		// alert(tr);
+	$(".article-row th:first-child").click(function(){
+		var area = $(this).children(".fa-stack").children(".fa-stack-1x");
+		var tr = $(this).parent();
 
 		$(this).parent().toggleClass("article-row-selected");
-		$(area).toggleClass(".fa-check");
+		$(area).toggleClass("fa-check");
+		$(area).toggleClass("fa-circle");
 		$(tr).siblings().removeClass("article-row-selected");
 		$(tr).siblings().find(".fa-stack-1x").removeClass("fa-check");
 		$(tr).siblings().find(".fa-stack-1x").addClass("fa-circle");

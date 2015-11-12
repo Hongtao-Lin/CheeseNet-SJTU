@@ -1,0 +1,156 @@
+.hw-name{
+	display: inline-block;
+	width: 32%;
+}
+
+.hw-time{
+	display: inline-block;
+	width: 15%;
+}
+
+.hw-for{
+	display: inline-block;
+	width: 30%;
+}
+
+.hw-for label{
+	font-size: 17px;
+}
+
+.hw-class{
+	border-radius: 5px;
+	background-color: gainsboro;
+	padding: 3px 50px 3px 10px;
+	height: 33px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hw-class span{
+	vertical-align: middle;
+}
+
+.hw-compulsory{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hw-class.class-selected{
+	background-color: rgb(127,230,203) !important;
+
+}
+
+.hw-class.class-selected .fa-stack-2x{
+	color: rgb(0,204,153) !important;
+}
+
+.hw-class.class-selected .fa-stack-1x{
+	color: white !important;
+}
+
+.fa-stack .fa-square.fa-stack-2x{
+	color: lightgrey;
+}
+
+.fa-stack .fa-square.fa-stack-1x{
+	color: white;
+	font-size: 23px;
+}
+
+.random,.single-commit{
+	border-radius: 5px;
+	background-color: rgb(237,246,245);
+	padding: 3px 50px 3px 10px;
+	height: 33px;
+	vertical-align: middle;
+	margin: 5px 0 !important;
+	width: 50%;
+}
+
+.form-group span{
+	vertical-align: middle;
+}
+
+.other-toggle{
+	color: #44BFCD;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 30px 0;
+	display: block;
+}
+
+form{
+	margin: 30px 0;
+}
+
+.tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-light + .tgl-btn {
+  background: rgb(154,154,154);
+  border-radius: 2em;
+  padding: 2px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+.tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: rgb(204,204,204);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.tgl-light:checked + .tgl-btn {
+  background: rgb(0,202,152);
+}
+
+div.switch{
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+	margin: 2px 0;
+}
+
+div.switch span{
+	position: absolute;
+	top: 0;
+	font-size: 13px;
+	font-weight: bold;
+	color: white;
+}
