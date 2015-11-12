@@ -27,6 +27,7 @@
 	height: 33px;
 	display: inline-block;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .hw-class span{
@@ -92,6 +93,7 @@
 	font-weight: bold;
 	margin: 30px 0;
 	display: block;
+	cursor: pointer;
 }
 
 form{
@@ -116,7 +118,7 @@ form{
   outline: 0;
   display: block;
   width: 50px;
-  height: 20px;
+  height: 23px;
   position: relative;
   cursor: pointer;
 }
@@ -146,7 +148,7 @@ form{
   transition: all .4s ease;
 }
 .tgl-light + .tgl-btn:after {
-  border-radius: 50%;
+  border-radius: 2em;
   background: rgb(204,204,204);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -166,6 +168,7 @@ div.switch span{
 	position: absolute;
 	top: 0;
 	font-size: 13px;
+	line-height: 20px;
 	font-weight: bold;
 	color: white;
 }
