@@ -16,6 +16,9 @@
 .hw-for label{
 	font-size: 17px;
 }
+.hw-for>div{
+	margin: 0 0 10px 0;
+}
 
 .hw-class{
 	border-radius: 5px;
@@ -51,10 +54,22 @@
 .fa-stack .fa-square.fa-stack-2x{
 	color: lightgrey;
 }
-
-.fa-stack .fa-square.fa-stack-1x{
+.hw-compulsory .fa-square-o.fa-stack-2x{
+	color: lightgrey;
+}
+.hw-compulsory .fa-check.fa-stack-1x{
+	color: rgb(0,204,153);
+}
+.hw-compulsory .fa-square.fa-stack-1x{
+	color: white;
+}
+.hw-class .fa-square.fa-stack-1x{
 	color: white;
 	font-size: 23px;
+}
+
+.fa-check{
+	font-size: 18px !important;
 }
 
 .random,.single-commit{

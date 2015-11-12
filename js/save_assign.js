@@ -18,3 +18,10 @@ $(function(){
 		$("div.single-commit").toggle(100);
 	});
 });
+
+$(function(){
+	$(".hw-compulsory span").click(function(){
+		$(this).children(".fa-stack-1x").toggleClass("fa-square");
+		$(this).children(".fa-stack-1x").toggleClass("fa-check");
+	});
+});
