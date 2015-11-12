@@ -282,37 +282,52 @@ p, span, h4, h5, li{
 	height:50px;
 }
 .exercise_list li .exercise_li_left{
-	width:30px;
+	width:35px;
 	height:50px;
 	position:relative;
 	float:left;
-	background-color: #d2dfe8;
+	background-color: transparent;
 }
 .exercise_list li .exercise_li_left div{
 	text-align: center;
 	line-height:17px;
-	font-size: 12px;
+	font-size: 15px;
 }
+.exercise_list li .exercise_li_left .exercise_num{
+	background-color: #d2dfe8;
+}
+
 .exercise_list li .exercise_li_left .exercise_add,.exercise_min{
-	background: #b5b5b5;
+	/*background: #b5b5b5;*/
+	background-color: #9EBECB;
 	color:white;
+	cursor: pointer;
 }
+
 .exercise_list li .exercise_li_left .exercise_add{
-	border-radius:5px 0 0 0;
+	border-radius:10px 0 0 0;
 }
 .exercise_list li .exercise_li_left .exercise_min{
-	border-radius:0px 0 0 5px;
+	border-radius:0px 0 0 10px;
 }
+
+.exercise_list li .exercise_li_left .limit_num{
+	background-color: #b5b5b5;
+	cursor: default;
+}
+
 .exercise_list li .exercise_li_right{
 	background-color: white;
-	border-radius: 0 5px 5px 0;
+	border-radius: 10px;
 	height:50px;
-	padding-left:36px;
+	padding-left: 40px;
 	padding-top:3px;
 	padding-bottom:3px;
 	color:#857b6f;
 	padding-right: 24px;
 }
+
+
 .exercise_li_right div{
 	position: relative;
 }    
@@ -322,19 +337,17 @@ p, span, h4, h5, li{
     top: 14px;
 }    
 .close_new {
-    /* still bad on picking color */
     background: #cccccc;
     color: white;
-    /* make a round button */
-    border-radius: 12px;
-    /* center text */
-    line-height: 12px;
+    border-radius: 16px;
+    line-height: 14px;
     text-align: center;
     height: 16px;
     width: 16px;
-    font-size: 12px;
-    padding: 1px;
-}
+    font-size: 16px;
+    /* padding: 1px; */
+    padding-left: 1px;
+    padding-top: 1px;}
 .close_new:hover{
 	background: #f37c7e;
 }
@@ -378,4 +391,10 @@ p, span, h4, h5, li{
 
 .subtitle{
 	color:#727480;
+}
+
+.left_circle {
+  width: 40px;
+  height: 80px;
+  border-radius: 40px 0 0 40px;
 }
