@@ -193,7 +193,7 @@ p, span, h4, h5, li{
 	width: 100%;
 	position: relative;
 	padding: 20px 0;
-	bottom: -10px;
+	/*bottom: -10px;*/
 	border-radius: 10px;
 	background-color: #E7E7E7;
 	text-align: center;
@@ -211,6 +211,7 @@ p, span, h4, h5, li{
 	margin: auto 25px;
 	letter-spacing: 2px;
     padding: 0px 20px;
+    font-weight: bold;
 }
 
 .footer_div button span {
@@ -256,7 +257,7 @@ p, span, h4, h5, li{
 	width:280px;
 	background-color: #f1f1f1;
 	margin-top:10px;
-	padding-top: 20px;
+	padding-top: 30px;
 	border-radius: 10px;
 	height:544px;
 }

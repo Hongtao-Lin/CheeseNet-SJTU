@@ -1,0 +1,258 @@
+#select-system h2
+{
+	text-align: center;
+	margin: 50px 0;
+	color: #43BECD;
+}
+
+#select-system .row
+{
+	margin: 50px 20px;
+}
+
+#select-system .row img{
+	cursor: pointer;
+}
+
+#select-system .row div{
+	text-align: center;
+}
+
+#assign-panel .hw-name{
+	display: inline-block;
+	width: 32%;
+}
+
+#assign-panel .hw-time{
+	display: inline-block;
+	width: 15%;
+}
+
+#assign-panel .hw-for{
+	display: inline-block;
+	width: 30%;
+}
+
+#assign-panel .hw-for label{
+	font-size: 17px;
+}
+#assign-panel .hw-for>div{
+	margin: 0 0 10px 0;
+}
+
+#assign-panel .hw-class{
+	border-radius: 5px;
+	background-color: gainsboro;
+	padding: 3px 50px 3px 10px;
+	height: 33px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#assign-panel .hw-class span{
+	vertical-align: middle;
+}
+
+#assign-panel .hw-compulsory{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#assign-panel .hw-class .class-selected{
+	background-color: rgb(127,230,203) !important;
+
+}
+
+#assign-panel .hw-for .fa-stack{
+	cursor: pointer;
+}
+
+#assign-panel .hw-class .class-selected .fa-stack-2x{
+	color: rgb(0,204,153) !important;
+}
+
+#assign-panel .hw-class .class-selected .fa-stack-1x{
+	color: white !important;
+}
+
+#assign-panel .fa-stack .fa-square{
+	color: lightgrey;
+}
+#assign-panel .hw-compulsory .fa-square-o{
+	color: lightgrey;
+}
+#assign-panel .fa-check{
+	color: rgb(0,204,153);
+}
+#assign-panel .hw-compulsory .fa-square{
+	color: white;
+}
+#assign-panel .hw-class .fa-square{
+	color: white;
+	font-size: 23px;
+}
+
+#assign-panel .fa-check{
+	font-size: 18px !important;
+}
+
+#assign-panel .random, #assign-panel .single-commit{
+	border-radius: 5px;
+	background-color: rgb(237,246,245);
+	padding: 3px 50px 3px 10px;
+	height: 33px;
+	vertical-align: middle;
+	margin: 5px 0 !important;
+	width: 50%;
+}
+
+#assign-panel .form-group span{
+	cursor: pointer;
+	vertical-align: middle;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+}
+
+#assign-panel .other-toggle{
+	color: #44BFCD;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 30px 0;
+	display: block;
+	cursor: pointer;
+}
+
+#assign-panel form{
+	margin: 30px 0;
+}
+
+#assign-panel .tgl {
+  display: none;
+}
+#assign-panel .tgl, #assign-panel .tgl:after, #assign-panel .tgl:before, #assign-panel .tgl *, #assign-panel .tgl *:after, #assign-panel .tgl *:before, #assign-panel .tgl + #assign-panel .tgl-btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#assign-panel .tgl::-moz-selection, #assign-panel .tgl:after::-moz-selection, #assign-panel .tgl:before::-moz-selection, #assign-panel .tgl *::-moz-selection, #assign-panel .tgl *:after::-moz-selection, #assign-panel .tgl *:before::-moz-selection, #assign-panel .tgl + #assign-panel .tgl-btn::-moz-selection {
+  background: none;
+}
+#assign-panel .tgl::selection, #assign-panel .tgl:after::selection, #assign-panel .tgl:before::selection, #assign-panel .tgl *::selection, #assign-panel .tgl *:after::selection, #assign-panel .tgl *:before::selection, #assign-panel .tgl + .tgl-btn::selection {
+  background: none;
+}
+#assign-panel .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 50px;
+  height: 23px;
+  position: relative;
+  cursor: pointer;
+}
+#assign-panel .tgl + .tgl-btn:after, #assign-panel .tgl + .tgl-btn:before {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+#assign-panel .tgl + .tgl-btn:after {
+  left: 0;
+}
+#assign-panel .tgl + .tgl-btn:before {
+  display: none;
+}
+#assign-panel .tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+#assign-panel .tgl-light + .tgl-btn {
+  background: rgb(154,154,154);
+  border-radius: 2em;
+  padding: 2px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+#assign-panel .tgl-light + .tgl-btn:after {
+  border-radius: 2em;
+  background: rgb(204,204,204);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#assign-panel .tgl-light:checked + .tgl-btn {
+  background: rgb(0,202,152);
+}
+
+#assign-panel div.switch{
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+	margin: 2px 0;
+}
+
+#assign-panel div.switch span{
+	position: absolute;
+	top: 0;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+#set-number h2{
+	text-align: center;
+	margin: 50px 0;
+	color: #43BECD;
+}
+
+#set-number h3{
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+#set-number>div.row{
+	margin: 50px 20px;
+}
+
+#set-number input{
+	border-radius: 10px;
+	border: 0;
+	height: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+#set-number label{
+	font-size: 24px;
+	position: relative;
+	top: 8px;
+}
+
+#set-number .input.row{
+	background-color: rgb(186,240,226);
+	border-radius: 10px;
+	padding: 35px 50px;
+	width: 70%;
+	margin: 10px auto 30px auto;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#set-number .group{
+	margin: 20px 50px;
+	background-image: url(../Images/Icons/bracket_grey.png);
+	padding: 40px 20px;
+	background-size: 310px 260px;
+	background-repeat: no-repeat;
+}
+
+#set-number .group.active .input.row{
+	background-color: rgb(69,217,181);
+}
+
+#set-number .group.active{
+	background-image: url(../Images/Icons/bracket_green.png) !important;
+}

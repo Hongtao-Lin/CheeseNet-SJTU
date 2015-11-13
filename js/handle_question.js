@@ -54,8 +54,65 @@ $(function(){
 	$("#change_passage_div [toggle=collapse]").click(function(){
 		var target = $($(this).attr("target"));
 		$(target).toggle(500);
-		// alert($(this).text());
 		$(this).text($(this).text() == "详情" ? "收起" : "详情")
+	});
+});
+
+$(function(){
+	$("#assign-panel div.hw-compulsory").toggle();
+	$("#assign-panel .hw-class span.fa-stack").click(function(){
+		$(this).parent().siblings().toggle(100);
+		$(this).parent().toggleClass("class-selected");
+		$(this).children(".fa-stack-1x").toggleClass("fa-square");
+		$(this).children(".fa-stack-1x").toggleClass("fa-check");
+	});
+});
+
+$(function(){
+	$("#assign-panel div.random").toggle();
+	$("#assign-panel div.single-commit").toggle();
+	$("#assign-panel span.other-toggle").click(function(){
+		$(this).children("i.fa").toggleClass("fa-angle-double-right");
+		$(this).children("i.fa").toggleClass("fa-angle-double-down");
+		$("#assign-panel div.random").toggle(100);
+		$("#assign-panel div.single-commit").toggle(100);
+	});
+});
+
+$(function(){
+	$("#assign-panel .hw-compulsory span").click(function(){
+		$(this).children(".fa-stack-1x").toggleClass("fa-square");
+		$(this).children(".fa-stack-1x").toggleClass("fa-check");
+	});
+});
+
+$(function(){
+	$("#select-system img").click(function(){
+		var src = $(this).attr("src");
+		if(src.match("grey")){
+			$(this).attr("src",src.replace(/grey/,"green"));
+		}else{
+			$(this).attr("src",src.replace(/green/,"grey"));
+		}
+	});
+});
+
+$(function(){
+	$("#set-number input").focus(function(){
+		$(this).parent().parent().addClass("active");
+		$(this).parent().parent().find("h3").css("color", "rgb(69, 217, 181)");
+		$(this).parent().find("label").css("color", "white");
+	});
+});
+
+$(function(){
+	$("#set-number input").blur(function(){
+		if($(this).val() == ""){
+			$(this).parent().parent().removeClass("active");
+			$(this).parent().parent().find("h3").css("color", "inherit");
+			$(this).parent().find("label").css("color", "inherit");
+
+		}
 	});
 });
 
@@ -74,19 +131,6 @@ $(document).ready(function() {
 		autoHide: true,
 		sliderSize: "20%",
 	});
-
-	/*$(function(){
-		$(".article-row th:first-child, .article-row th:nth-child(2)").click(function(){
-			var area = $(this).parent().children(".fa-stack");
-			// alert(area);
-			$(this).parent().toggleClass("article-row-selected");
-			$(area).find(".fa-stack-1x").toggleClass("fa-circle");
-			$(area).find(".fa-stack-1x").toggleClass("fa-check");
-
-			//$(".left-bar").load("teacher_accessment_0.html")
-
-		});
-	});*/
 
 	$('#select_rightbar .choice').bind("click",function(){
 		$(".choice").each(function(){
