@@ -485,6 +485,8 @@ h4 + .add_button{
 
 #select_rightbar{
 	width:940px;
+	position:absolute;
+	left:280px;
 	margin-left:40px;
 	border: solid 1px #e6e4e5;
 	margin-top:10px;
@@ -497,6 +499,7 @@ h4 + .add_button{
     position: relative;
     z-index:100;
     float:right;
+    background-color:white;
 }
 #select_rightbar>.select_padding_fix{
 	padding-left:25px;

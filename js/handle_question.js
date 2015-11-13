@@ -6,9 +6,17 @@ $(function(){
 
 $(function(){
 	$(".choice_list .question_op a").click(function(){
-		$("#right-bar-base").hide({duration: 600, queue: false});
+		//$("#right-bar-base").hide({duration: 600, queue: false});
+		$("#replace_toggle").css("display","block");
+		$("#select_rightbar").css('width','0');
+		$("#select_rightbar").css('position','absolute');
+		$("#select_rightbar").css('z-index','1000');
 		$("#select_rightbar").css('display','block');
-		$("#select_rightbar").show({queue: false}).animate({
+		$("#select_rightbar").css('left','1220px');
+		$("#select_rightbar").animate({
+			"left": "280px"
+		}, {duration: 600, queue: false});
+		$("#select_rightbar").animate({
 			"width": "940px"
 		}, {duration: 600, queue: false});
 	});
@@ -19,10 +27,16 @@ $(function(){
 			"width": "940px"
 		}, {duration: 600, queue: false});
 	});
-
 	$(".replace_toggle").click(function(){
-		$("#select_rightbar").hide({duration: 600, queue: false});
+		$(".replace_toggle").css("display","none");
+		$("#select_rightbar").animate({
+			"left": "1220px"
+		}, {duration: 600, queue: false});
+		$("#select_rightbar").animate({
+			"width": "0px"
+		}, {duration: 600, queue: false});
 		$("#change_passage_div").hide({duration: 600, queue: false});
+		$(".replace_toggle").hide({duration:0,queue:false});
 		$("#right-bar-base").show({duration: 600, queue: false});
 		
 	});
