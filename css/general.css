@@ -279,8 +279,9 @@ p, span, h4, h5, li{
 	margin-bottom:10px;
 }
 .exercise_list li{
-	margin-top:4px;
-	height:50px;
+	margin-top:0px;
+	height:0px;
+	overflow: hidden;
 }
 .exercise_list li .exercise_li_left{
 	width:35px;
@@ -398,4 +399,8 @@ p, span, h4, h5, li{
   width: 40px;
   height: 80px;
   border-radius: 40px 0 0 40px;
+}
+
+.display_none{
+	display:none;
 }
