@@ -7,7 +7,8 @@ $(function(){
 $(function(){
 	$(".choice_list .question_op a").click(function(){
 		//$("#right-bar-base").hide({duration: 600, queue: false});
-		$("#replace_toggle").css("display","block");
+		$("#select_rightbar").css("display","block");
+		$(".replace_toggle").css("display","block");
 		$("#select_rightbar").css('width','0');
 		$("#select_rightbar").css('position','absolute');
 		$("#select_rightbar").css('z-index','1000');
@@ -36,8 +37,11 @@ $(function(){
 			"width": "0px"
 		}, {duration: 600, queue: false});
 		$("#change_passage_div").hide({duration: 600, queue: false});
-		$(".replace_toggle").hide({duration:0,queue:false});
 		$("#right-bar-base").show({duration: 600, queue: false});
+		setTimeout(function () { 
+	        $("#select_rightbar").css("display","none");
+	    }, 600);
+
 		
 	});
 });
